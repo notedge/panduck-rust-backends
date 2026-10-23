@@ -1,7 +1,6 @@
 {
     "name": "@tex/vutex-workspace",
     "private": true,
-    "packageManager": "pnpm@10.28.0",
     "description": "Packing Man：pm-* Rust crates + @sxo/packing 宿主",
     "license": "MIT",
     "scripts": {
@@ -18,5 +17,6 @@
         "@doki-land/nifty": "^0.0.12",
         "@types/node": "^22.10.0",
         "typescript": "5.9.3"
-    }
+    },
+    "packageManager": "pnpm@10.28.0"
 }
