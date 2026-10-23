@@ -1,11 +1,22 @@
 {
+    "name": "packing-man-workspace",
     "private": true,
+    "packageManager": "pnpm@10.28.0",
+    "description": "Packing Man：pm-* Rust crates + @sxo/packing 宿主",
+    "license": "MIT",
     "scripts": {
-        "doc": "cargo doc --no-deps --all-features",
-        "test": "cargo test --release",
-        "fmt": "cargo fmt --all",
-        "p": "git push && git push --tags --prune",
-        "reset": "git reset Head~ --soft",
-        "u": "cargo upgrade --workspace"
+        "postinstall": "node ./scripts/ensure-vmz-host-manifest.mjs",
+        "check": "cargo check --workspace && cargo test --workspace",
+        "test": "cargo test --workspace",
+        "render": "pnpm --filter @sxo/packing exec packing packing.svg --container-r 10 --circle-r 1 --count 19 --algorithm force",
+        "build:wasm": "node ./scripts/build-wasm.mjs",
+        "build:napi": "node ./scripts/build-napi.mjs",
+        "build:ts": "pnpm --filter @sxo/packing run build && pnpm --filter @sxo/packing-unknown-wasm32 run build",
+        "dev:homepage": "pnpm --filter @sxo/packing-homepage run dev"
+    },
+    "devDependencies": {
+        "@doki-land/nifty": "^0.0.12",
+        "@types/node": "^22.10.0",
+        "typescript": "5.9.3"
     }
 }

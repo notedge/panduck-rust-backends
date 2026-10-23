@@ -1,12 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: "cargo"
-    directory: "/projects/sub_projects"
-    target-branch: "dev"
+  - package-ecosystem: cargo
+    directory: /
+    target-branch: dev
     schedule:
-      interval: "daily"
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    target-branch: "dev"
+      interval: weekly
+  - package-ecosystem: npm
+    directory: /
+    target-branch: dev
     schedule:
-      interval: "daily"
+      interval: weekly
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: dev
+    schedule:
+      interval: weekly

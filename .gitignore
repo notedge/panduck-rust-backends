@@ -4,11 +4,29 @@ thumbs.db
 time-travel.*
 
 # IDE
+whitebooks/
 .vscode/
-.vs/
 .idea/
+.trae/
+.vs/
 *.iml
 
 # Rust
 target/
 Cargo.lock
+.cargo/config.toml
+
+# Node
+node_modules/
+cache/
+dist/
+*.node
+*.wasm
+*.txt
+*.log
+
+
+# Renderer
+_tmp_render/
+*.png
+*.zip
