@@ -1,7 +1,5 @@
 name: Check Rust
 
-# Rust fmt/test only. TypeScript checks: check-typescript.yml
-# Publish: release-npm.yml on v*.*.* tags.
 on:
   push:
     branches: [master, main, dev]
@@ -34,4 +32,3 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - run: cargo test --workspace
-      - run: cargo build -p pm-napi --release

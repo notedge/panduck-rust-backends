@@ -1,22 +1,11 @@
 {
-    "name": "@tex/vutex-workspace",
     "private": true,
-    "description": "Packing Man：pm-* Rust crates + @sxo/packing 宿主",
-    "license": "MIT",
+    "name": "vutex-workspace",
+    "description": "VuTeX: language-neutral document typesetting and rendering (Rust workspace)",
+    "license": "MPL-2.0",
     "scripts": {
-        "postinstall": "node ./scripts/ensure-vmz-host-manifest.mjs",
-        "check": "cargo check --workspace && cargo test --workspace",
+        "check": "cargo check --workspace",
         "test": "cargo test --workspace",
-        "render": "pnpm --filter @sxo/packing exec packing packing.svg --container-r 10 --circle-r 1 --count 19 --algorithm force",
-        "build:wasm": "node ./scripts/build-wasm.mjs",
-        "build:napi": "node ./scripts/build-napi.mjs",
-        "build:ts": "pnpm --filter @sxo/packing run build && pnpm --filter @sxo/packing-unknown-wasm32 run build",
-        "dev:homepage": "pnpm --filter @sxo/packing-homepage run dev"
-    },
-    "devDependencies": {
-        "@doki-land/nifty": "^0.0.12",
-        "@types/node": "^22.10.0",
-        "typescript": "5.9.3"
-    },
-    "packageManager": "pnpm@10.28.0"
+        "fmt": "cargo fmt --all"
+    }
 }
