@@ -1,5 +1,5 @@
 {
-    "name": "packing-man-workspace",
+    "name": "@tex/vutex-workspace",
     "private": true,
     "packageManager": "pnpm@10.28.0",
     "description": "Packing Man：pm-* Rust crates + @sxo/packing 宿主",
